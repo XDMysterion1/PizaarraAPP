@@ -15,6 +15,10 @@ import javax.swing.JPanel;
  * @author celier
  */
 public class PizarraPanel extends JPanel implements MouseListener,MouseMotionListener{
+    
+    public PizarraPanel(){
+    
+    }
 
     @Override
     public void mouseClicked(MouseEvent e) {
