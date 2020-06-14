@@ -60,5 +60,42 @@ public class Forma {
 		this.grupo   = grupo;
 		
 	}
+        public int getForma(){
+		return this.forma;
+	}
+	public String getMensaje() {
+		return this.mensaje;
+	}
+	public Font getFuente() {
+		return this.fuente;
+	}
+	public int getx1(){
+		return this.x1;
+	}
+	public int getx2(){
+		return this.x2;
+	}
+	public int gety1(){
+		return this.y1;
+	}
+	public int gety2(){
+		return this.y2;
+	}
+	public Color getColor(){
+		return this.color;
+	}
+	public Color getColorRelleno(){
+		return this.colorRelleno;
+	}
+	public BasicStroke getCarrera(){
+		return this.carrera;
+	}
+	public boolean getTransparente(){
+		return this.transparente;
+	}
+	
+	public int getGrupo(){
+		return this.grupo;
+	}
     
 }
