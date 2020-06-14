@@ -1,7 +1,11 @@
 
 package pizarraapp;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
@@ -24,8 +28,54 @@ public class BarraHerramienta {
 	private DibujarMarco      marco;  
         
         public BarraHerramienta(DibujarMarco marco) {
+               	this.marco = marco;
+		this.initializeToolBar();
+		limpiar.addActionListener(this);
+		rectangulo.addActionListener(this);
+		linea.addActionListener(this);
+		circulo.addActionListener(this);
+		borrador.addActionListener(this);
+		lapiz.addActionListener(this);
+		deshacer.addActionListener(this);
+		rehacer.addActionListener(this);
+		texto.addActionListener(this);
+		guardar.addActionListener(this);
+		abrir.addActionListener(this);
+		nuevoArchivo.addActionListener(this);
 
+	}
+        private void initializeToolBar() {
+	
+		barraHerramientBar = new JToolBar(JToolBar.VERTICAL);
+		barraHerramientBar.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.BLACK));
+		barraHerramientBar.setFloatable(false);
+		barraHerramientBar.setLayout(new GridLayout(18,0));
 
+		guardar      = new JButton("Guardar",        new ImageIcon(this.getClass().getResource("")));
+		abrir 	     = new JButton("Abrir",	     new ImageIcon(this.getClass().getResource("")));
+		nuevoArchivo = new JButton("Nuevo",	     new ImageIcon(this.getClass().getResource("")));
+		lapiz 	     = new JButton("Lapiz",	     new ImageIcon(this.getClass().getResource("")));
+		linea 	     = new JButton("Linea",          new ImageIcon(this.getClass().getResource("")));
+		rectangulo   = new JButton("Rectangulo",     new ImageIcon(this.getClass().getResource("")));
+		circulo      = new JButton("Circulo",        new ImageIcon(this.getClass().getResource("")));
+		texto 	     = new JButton("Etiqueta",	     new ImageIcon(this.getClass().getResource("")));
+		borrador     = new JButton("Borrador",       new ImageIcon(this.getClass().getResource("")));
+		deshacer     = new JButton("Deshacer",       new ImageIcon(this.getClass().getResource("")));
+		rehacer      = new JButton("Rehacer",        new ImageIcon(this.getClass().getResource("")));
+		limpiar      = new JButton("Limpiar",        new ImageIcon(this.getClass().getResource("")));
+		
+		barraHerramientBar.add(nuevoArchivo);
+		barraHerramientBar.add(abrir);
+		barraHerramientBar.add(guardar);
+		barraHerramientBar.add(lapiz);
+		barraHerramientBar.add(linea);
+		barraHerramientBar.add(rectangulo);
+		barraHerramientBar.add(circulo);
+		barraHerramientBar.add(texto);
+		barraHerramientBar.add(borrador);
+		barraHerramientBar.add(limpiar);
+		barraHerramientBar.add(deshacer);
+		barraHerramientBar.add(rehacer);
 	}
     
 }
