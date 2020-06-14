@@ -36,5 +36,29 @@ public class Forma {
 		this.colorRelleno = relleno;
 		this.transparente = transparente;
 	}
+        public Forma(int x1, int y1, int longitudFuente, Font fuente, Color color, BasicStroke carrera, int forma, String mensaje){
+		this.x1 	  = x1;
+		this.y1 	  = y1;
+		this.y2 	  = 0;
+		this.fuente   = fuente;
+		this.x2 	  = longitudFuente;
+		this.color 	  = color;
+		this.carrera  = carrera;
+		this.forma 	  = forma;
+		this.grupo    = 0;
+		this.mensaje  = mensaje;
+	}
+	
+	public Forma(int x1, int y1,int x2, int y2, Color color,BasicStroke carrera, int forma,int grupo){
+		this.x1      = x1;
+		this.x2      = x2;
+		this.y1      = y1;
+		this.y2      = y2;
+		this.color   = color;
+		this.carrera = carrera;
+		this.forma   = forma;
+		this.grupo   = grupo;
+		
+	}
     
 }
