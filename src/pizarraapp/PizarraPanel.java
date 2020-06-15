@@ -96,4 +96,12 @@ public class PizarraPanel extends JPanel implements MouseListener,MouseMotionLis
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+    public void setAnchoPanelTinta(int width){
+	this.anchoPanelTinta = width;
+    }
+    
+    public void setlargoPanelTinta(int height){
+	this.largoPanelTinta = height;
+    }
+    
 }
