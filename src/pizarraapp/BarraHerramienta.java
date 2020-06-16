@@ -4,6 +4,7 @@ package pizarraapp;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -76,6 +77,31 @@ public class BarraHerramienta {
 		barraHerramientBar.add(limpiar);
 		barraHerramientBar.add(deshacer);
 		barraHerramientBar.add(rehacer);
+	}
+        public void actionPerformed(ActionEvent ae) {
+		Object fuente = ae.getSource();
+
+		if (fuente == limpiar) {
+			marco.getTintaPanel().limpiar();
+		} else if (fuente == lapiz) {
+			marco.getTintaPanel().setHerramienta(0);
+		} else if (fuente == linea) {
+			marco.getTintaPanel().setHerramienta(1);
+		} else if (fuente == rectangulo) {
+			marco.getTintaPanel().setHerramienta(2);
+		} else if (fuente == circulo){
+			marco.getTintaPanel().setHerramienta(3);
+		} else if (fuente == texto) {
+			marco.getTintaPanel().setHerramienta(5);			
+		} else if (fuente == borrador) {
+			marco.getTintaPanel().setHerramienta(6);
+		} else if (fuente == llenar) {
+			marco.getTintaPanel().setHerramienta(7);
+		} 
+
+	}
+	 public JToolBar getBarraHerramienta() {
+		return this.barraHerramientBar;
 	}
     
 }
