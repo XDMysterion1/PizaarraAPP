@@ -53,7 +53,7 @@ public class PizarraPanel extends JPanel implements MouseListener, MouseMotionLi
     private int anchoPanelTinta;
     private int largoPanelTinta;
 
-    public PanelPintura(int f, DibujarMarco marco, int width, int height) {
+    public PizarraPanel(int f, DibujarMarco marco, int width, int height) {
 
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         anchoPanelTinta = dim.width - 150;

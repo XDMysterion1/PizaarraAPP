@@ -5,12 +5,13 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JToolBar;
 
-public class BarraHerramienta {
+public class BarraHerramienta implements ActionListener {
     	private JToolBar 	  barraHerramientBar;
 	private JButton 	  lapiz;
 	private JButton		  linea;
@@ -52,18 +53,18 @@ public class BarraHerramienta {
 		barraHerramientBar.setFloatable(false);
 		barraHerramientBar.setLayout(new GridLayout(18,0));
 
-		guardar      = new JButton("Guardar",        new ImageIcon(this.getClass().getResource("")));
-		abrir 	     = new JButton("Abrir",	     new ImageIcon(this.getClass().getResource("")));
-		nuevoArchivo = new JButton("Nuevo",	     new ImageIcon(this.getClass().getResource("")));
-		lapiz 	     = new JButton("Lapiz",	     new ImageIcon(this.getClass().getResource("")));
-		linea 	     = new JButton("Linea",          new ImageIcon(this.getClass().getResource("")));
-		rectangulo   = new JButton("Rectangulo",     new ImageIcon(this.getClass().getResource("")));
-		circulo      = new JButton("Circulo",        new ImageIcon(this.getClass().getResource("")));
-		texto 	     = new JButton("Etiqueta",	     new ImageIcon(this.getClass().getResource("")));
-		borrador     = new JButton("Borrador",       new ImageIcon(this.getClass().getResource("")));
-		deshacer     = new JButton("Deshacer",       new ImageIcon(this.getClass().getResource("")));
-		rehacer      = new JButton("Rehacer",        new ImageIcon(this.getClass().getResource("")));
-		limpiar      = new JButton("Limpiar",        new ImageIcon(this.getClass().getResource("")));
+		guardar      = new JButton("Guardar");
+		abrir 	     = new JButton("Abrir");
+		nuevoArchivo = new JButton("Nuevo");
+		lapiz 	     = new JButton("Lapiz");
+		linea 	     = new JButton("Linea");
+		rectangulo   = new JButton("Rectangulo");
+		circulo      = new JButton("Circulo");
+		texto 	     = new JButton("Etiqueta");
+		borrador     = new JButton("Borrador");
+		deshacer     = new JButton("Deshacer");
+		rehacer      = new JButton("Rehacer");
+		limpiar      = new JButton("Limpiar");
 		
 		barraHerramientBar.add(nuevoArchivo);
 		barraHerramientBar.add(abrir);
